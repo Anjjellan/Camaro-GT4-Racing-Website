@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Feedback page for Anjjellan's GT4 racing website. Share your comments, suggestions, or questions.">
+    <meta name="keywords" content="feedback, contact, GT4, racing website, web developer">
+    <title>Feedback - Anjjellan's GT4 Racing Website</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Hide the form and display the success message
+            document.getElementById("feedback-form").style.display = "none";
+            document.getElementById("confirmation-message").style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Feedback</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="car.html" aria-label="Learn more about the selected GT4 car">Car Information</a></li>
+                <li><a href="track.html" aria-label="View track information for GT4 racing">Track Information</a></li>
+                <li><a href="livery.html" aria-label="Discover livery design for GT4 cars">Livery Design</a></li>
+                <li><a href="bio.html" aria-label="Read the biography of the website creator">Biography</a></li>
+                <li><a href="feedback.html" aria-label="Share your feedback or ask questions about this website">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="feedback-section">
+            <h2>I Value Your Feedback</h2>
+
+            <!-- Success message, hidden by default -->
+            <p id="confirmation-message" style="display: none;">Thank you! Your feedback has been submitted successfully.</p>
+
+            <!-- Feedback form -->
+            <form id="feedback-form" onsubmit="handleFormSubmission(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required placeholder="Subject of Your Message">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+                
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Anjjellan Sam Santhakumar B01009263. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
